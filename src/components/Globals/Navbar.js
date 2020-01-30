@@ -1,9 +1,9 @@
 import React from "react"
 import {Link} from'gatsby'
 import logo from '../../images/logo.svg'
-import {FaCart} from 'react-icons/fa'
+import {FaCartArrowDown} from 'react-icons/fa'
 
-export default class Navbar extends Component {
+export default class Navbar extends React.PureComponent {
   state = {
     navbarOpen: false,
     css: 'collapse navbar-collapse',
@@ -38,9 +38,10 @@ export default class Navbar extends Component {
         </button>
         <div className={this.state.css}>
           <ul className="navbar-nav mx-auto">
-            {this.state.links(link => <li>
-              <Link key={link.id} to={link.path}>{link.text}</Link>
+            {this.state.links.map(link => <li key={link.id} className="nav-item">
+              <Link  className="nav-link text-capitalize" to={link.path}>{link.text}</Link>
               </li>)}
+            <li key="1000"><FaCartArrowDown className="vav-item ml-sm-5 cart-icon" /></li>
           </ul>
         </div>
       </nav>
