@@ -1,9 +1,15 @@
 :root {
   --mainYellow: #ffd000;
+  --mainBrown: #662200;
+  --fontFamily: monospace, sans-serif;
+}
+body {
+  _font-family: var(--fontFamily);
 }
 .cart-icon {
   cursor: pointer;
-  color: var(--mainYellow);
+  color: var(--mainBrown);
+  font-size: 2rem;
 }
 .default-background {
   display: flex;

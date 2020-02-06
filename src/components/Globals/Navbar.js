@@ -41,7 +41,7 @@ export default class Navbar extends React.PureComponent {
             {this.state.links.map(link => <li key={link.id} className="nav-item">
               <Link  className="nav-link text-capitalize" to={link.path}>{link.text}</Link>
               </li>)}
-            <li key="1000"><FaCartArrowDown className="vav-item ml-sm-5 cart-icon" /></li>
+            <li key="1000" className="nav-item ml-sm-5"><FaCartArrowDown className="cart-icon" /></li>
           </ul>
         </div>
       </nav>

@@ -4,18 +4,19 @@ import SEO from "../components/seo"
 import BackgroundSection from '../components/Globals/BackgroundSection'
 import Info from '../components/Home/Info'
 
-const IndexPage = ({data}) => (
+const AboutPage = ({data}) => (
   <Layout>
-    <SEO title="Home" />
-    <BackgroundSection img={data.img.childImageSharp.fluid} title="Coffe Shop" styleClass="default-background" />
+    <SEO title="About" />
+    <BackgroundSection img={data.img.childImageSharp.fluid} title="About Us" styleClass="default-background" />
+    <p>vedi video 16 per css e html</p>
     <Info />
   </Layout>
 )
 
-export default IndexPage
+export default AboutPage
 
 export const query = graphql`{
-  img: file(relativePath: {eq: "default-background.jpeg"}) {
+  img: file(relativePath: {eq: "about-background.jpeg"}) {
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid_tracedSVG
